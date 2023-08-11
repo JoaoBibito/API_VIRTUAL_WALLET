@@ -65,6 +65,7 @@ const updateUserService = async ({ name, username, password }: IUpdateUser, user
   return "User successfully updated"
 }
 export default {
+
   createUserService,
   findAllUsersService,
   findUserByIdService,
