@@ -1,10 +1,12 @@
-import mongoose from "mongoose";
+import mongoose, { ObjectId } from "mongoose";
 import { type } from "os";
 
 export interface IExpense {
   value: number,
   name: string,
-  date: Date
+  type: string,
+  createdAt: Date,
+  userId: string
 }
 
 const ExpenseSchema = new mongoose.Schema({

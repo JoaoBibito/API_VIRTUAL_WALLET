@@ -1,3 +1,4 @@
-import Expense, { IExpense } from "../models/Expenses";
+import Expense, { IExpense } from "../models/Expenses.ts";
 
-const createExpenseRepository = (body: IExpense) => Expense.create(body);
+export const createExpenseRepository = (body: IExpense) => Expense.create(body);
+
