@@ -13,13 +13,13 @@ app.use(express.json())
 
 const route = Router()
 
-
 route.get('/', (req: Request, res: Response) => {
   return res.json({ message: 'hello world with Typescript' })
 })
 
 app.use("/user", userRouter)
 app.use("/auth", authRouter)
+app.use("/transaction",)
 
 
 app.listen(3333, () => 'server running on port 3333')

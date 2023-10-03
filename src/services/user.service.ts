@@ -5,7 +5,8 @@ import { hashSync } from "bcrypt-ts"
 
 const createUserService = async (body: IUser) => {
   const { name, username, email, password } = body
-  if (!name || !username || !email || !password) throw new Error("input all fields")
+  console.log(body)
+  if (!name || !username || !email || !password) throw new Error("Input all fields")
 
   const foundUser = await userRepository.findUserByEmailRepository(email)
   if (foundUser) throw new Error("User alread exists")
@@ -58,6 +59,7 @@ const updateUserService = async ({ name, username, password }: IUpdateUser, user
     username,
     password
   });
+
 
   if (response.ok < 1) throw new Error("Error updating user")
 

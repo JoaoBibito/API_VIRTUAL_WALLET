@@ -5,9 +5,9 @@ import user from "../models/User.js";
 
 const UserRouter = Router();
 
-UserRouter.post("/", userController.createUserController)
-UserRouter.get("/", userController.findAllUsersController)
+UserRouter.post("/", userController.createUserController)//ok
+UserRouter.get("/", userController.findAllUsersController)//ok
 UserRouter.use(AuthMiddleware)
-UserRouter.get("/:id", userController.findUserByIdController)
-UserRouter.post("/:id", AuthMiddleware, userController.updateUserController)
+UserRouter.get("/:id", userController.findUserByIdController)//ok
+UserRouter.post("/:id", AuthMiddleware, userController.updateUserController)//ok
 export default UserRouter
